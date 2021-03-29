@@ -1,0 +1,77 @@
+\sloppy
+\documentclass[11pt, openany, a4paper]{book}
+
+%\usepackage[utf8]{inputenc}
+%\usepackage[russian]{babel}
+
+
+\usepackage{polyglossia}
+\setmainlanguage{russian}
+\setotherlanguage{english}
+\setkeys{russian}{babelshorthands=true}
+
+\newfontfamily{\cyrillicfont}{Times New Roman} 
+\newfontfamily{\cyrillicfontrm}{Times New Roman}
+\newfontfamily{\cyrillicfonttt}{Courier New}
+\newfontfamily{\cyrillicfontsf}{Arial}
+
+\addto\captionsrussian{%
+  \renewcommand{\figurename}{Рис.}%
+  \renewcommand{\tablename}{Табл.}%
+}
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[final]{graphicx}
+\usepackage{fancyhdr}
+\usepackage{epigraph}
+\usepackage{floatflt}
+\usepackage{mathtext}
+\setlength{\textwidth}{170mm}\setlength{\textheight}{240mm}
+\topmargin=-10mm
+\oddsidemargin=-3mm
+\evensidemargin=-3mm
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}  % убираем текущие установки для колонтитулов
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\itshape\rightmark}
+\fancyhead[RE]{\itshape\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{5pt}
+\newfont\TTT{larm1200 scaled 2000}
+\newfont\AAA{larm1095 scaled 1500}
+\def\AmSTeX{{\the\textfont2 A}\kern-.1667em\lower.5ex\hbox
+{\the\textfont2 M}\kern-.125em{\the\textfont2 S}-\TeX}
+\newcounter{Fig}\setcounter{Fig}{0}
+\newcommand{\Ris}[1]{рис.~\ref{fig:#1}}
+\newcommand{\Caption}[2]{\stepcounter{Fig}\caption{\label{fig:#1}#2}}
+\newcommand{\Paragraph}[1]{\par\vspace{2mm}\noindent{\bf{}#1}\vspace{2mm}\par{}}
+\newcommand{\Sec}[1]{см.\ раздел\ref{sec:#1}}
+\newcommand{\Term}[2]{\item[#1]\label{abb:#2} --- }
+\newcommand{\SeeTerm}[1]{см.\ статьи из глоссария на стр.\ \pageref{abb:#1}}
+\graphicspath {{./img/}}
+\includeonly  
+{
+	zadachi,
+	File_2,
+	oblozjka,
+}
+\makeindex
+
+%%чего не хватило российской науке во время пандемии Подробнее на РБК:
+%%https://www.rbc.ru/opinions/society/23/05/2020/5ec79db29a794732c603b1ce
+
+\begin{document}
+
+\tableofcontents
+    \include{zadachi}
+    \include{File_2}
+   \include{oblozjka}
+
+%\vspace{5mm}
+
+\end{document}
