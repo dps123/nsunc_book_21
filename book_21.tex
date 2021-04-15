@@ -1,9 +1,17 @@
 \sloppy
 \documentclass[11pt, openany, a4paper]{book}
 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[final]{graphicx}
+\usepackage{fancyhdr}
+\usepackage{epigraph}
+\usepackage{floatflt}
+\usepackage{mathtext}
+
 %\usepackage[utf8]{inputenc}
 %\usepackage[russian]{babel}
-
 
 \usepackage{polyglossia}
 \setmainlanguage{russian}
@@ -15,20 +23,12 @@
 \newfontfamily{\cyrillicfonttt}{Courier New}
 \newfontfamily{\cyrillicfontsf}{Arial}
 
-\addto\captionsrussian{%
-  \renewcommand{\figurename}{Рис.}%
-  \renewcommand{\tablename}{Табл.}%
+\addto\captionsrussian{
+  \renewcommand{\figurename}{Рис.}
+  \renewcommand{\tablename}{Табл.}
 }
+\usepackage[justification=centerlast,font=small,labelsep=period]{caption}
 
-
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage[final]{graphicx}
-\usepackage{fancyhdr}
-\usepackage{epigraph}
-\usepackage{floatflt}
-\usepackage{mathtext}
 \setlength{\textwidth}{170mm}\setlength{\textheight}{240mm}
 \topmargin=-10mm
 \oddsidemargin=-3mm
@@ -44,15 +44,16 @@
 \addtolength{\headheight}{5pt}
 \newfont\TTT{larm1200 scaled 2000}
 \newfont\AAA{larm1095 scaled 1500}
-\def\AmSTeX{{\the\textfont2 A}\kern-.1667em\lower.5ex\hbox
-{\the\textfont2 M}\kern-.125em{\the\textfont2 S}-\TeX}
-\newcounter{Fig}\setcounter{Fig}{0}
-\newcommand{\Ris}[1]{рис.~\ref{fig:#1}}
-\newcommand{\Caption}[2]{\stepcounter{Fig}\caption{\label{fig:#1}#2}}
-\newcommand{\Paragraph}[1]{\par\vspace{2mm}\noindent{\bf{}#1}\vspace{2mm}\par{}}
-\newcommand{\Sec}[1]{см.\ раздел\ref{sec:#1}}
-\newcommand{\Term}[2]{\item[#1]\label{abb:#2} --- }
-\newcommand{\SeeTerm}[1]{см.\ статьи из глоссария на стр.\ \pageref{abb:#1}}
+
+%\def\AmSTeX{{\the\textfont2 A}\kern-.1667em\lower.5ex\hbox
+%{\the\textfont2 M}\kern-.125em{\the\textfont2 S}-\TeX}
+%\newcounter{Fig}\setcounter{Fig}{0}
+%\newcommand{\Ris}[1]{рис.~\ref{fig:#1}}
+%\newcommand{\Caption}[2]{\stepcounter{Fig}\caption{\label{fig:#1}#2}}
+%\newcommand{\Paragraph}[1]{\par\vspace{2mm}\noindent{\bf{}#1}\vspace{2mm}\par{}}
+%\newcommand{\Sec}[1]{см.\ раздел\ref{sec:#1}}
+%\newcommand{\Term}[2]{\item[#1]\label{abb:#2} --- }
+%\newcommand{\SeeTerm}[1]{см.\ статьи из глоссария на стр.\ \pageref{abb:#1}}
 \graphicspath {{./img/}}
 \includeonly  
 {
