@@ -33,8 +33,11 @@
 \topmargin=-10mm
 \oddsidemargin=-3mm
 \evensidemargin=-3mm
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\renewcommand{\thesection}{\arabic{section}}
+
+
 \fancyhf{}  % убираем текущие установки для колонтитулов
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[LO]{\itshape\rightmark}
@@ -68,8 +71,8 @@
 
 \begin{document}
 
-\tableofcontents
     \include{zadachi}
+\tableofcontents
     \include{File_2}
    \include{oblozjka}
 
