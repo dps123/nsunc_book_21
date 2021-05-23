@@ -1,1 +1,9 @@
 /book_21.pdf
+*.aux
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.log
+*.toc
